@@ -33,7 +33,10 @@ public class Masina {
 		culoare = c;
 		disponibilitate = disp;
 		
+		
 	}
+	
+
 	
 	public int getPret(){
 		return pret;
@@ -57,5 +60,21 @@ public class Masina {
 	
 	public boolean getDisponibilitate(){
 		return disponibilitate;
+	}
+	
+	public void setPret(int PretNou){
+		pret = PretNou;
+	}
+	
+	public void setDisponibilitate (boolean DispN){
+		disponibilitate = DispN;
+	}
+	
+	
+	// de formatat sa arate mai bine
+	public String toString(){
+		
+		return "Detaliile despre masina: [Producator]" + producator + "[Model]" + model + "Pret" + pret + "[Capacitate]" + capacitate;
+		
 	}
 }

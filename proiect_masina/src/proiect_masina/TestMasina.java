@@ -44,15 +44,38 @@ public class TestMasina {
 		if (m3.getDisponibilitate() == true){
 			System.out.println("Masina este disponibila");
 		}
-		else{
-			System.out.println("Masina nu este disponibila, va rugam reveniti");
-		}
+			else{
+				System.out.println("Masina nu este disponibila, va rugam reveniti");
+			}
 		System.out.println("Producatorul este: " + m3.getProducator());
 		System.out.println("Modelul este: " + m3.getModel());
 		System.out.println("Pretul este: "+ m3.getPret());
 		System.out.println("Culoarea este: "+ m3.getCuloare());
 		System.out.println("Motorul(modificatia): "+m3.getCapacitate());
 		
+		System.out.println();
+		System.out.println();
+		
+		Masina m4 = new Masina(6500,2.0,"Skoda","OctaviaCombi","Gri",true);
+		m4.setPret(7000);
+		m4.setDisponibilitate(false);
+		
+		if (m4.getDisponibilitate() == true){
+			System.out.println("Masina este disponibila");
+		}
+			else{
+				System.out.println("Masina nu este disponibila, va rugam reveniti");
+			}
+		System.out.println("Producatorul este: " + m4.getProducator());
+		System.out.println("Modelul este: " + m4.getModel());
+		System.out.println("Pretul este: "+ m4.getPret());
+		System.out.println("Culoarea este: "+ m4.getCuloare());
+		System.out.println("Motorul(modificatia): "+m4.getCapacitate());
+		
+		System.out.println();
+		System.out.println();
+		
+		System.out.println(m2.toString());
 		
 			
 		
