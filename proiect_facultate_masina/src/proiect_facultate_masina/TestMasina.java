@@ -10,7 +10,7 @@ public class TestMasina {
 	
 	private static Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args) throws  IOException {
+	public static void main(String[] args) throws  IOException, Exception{
 		// TODO Auto-generated method stub
 		ArrayList<Masina> masini = new ArrayList<>();
 		Masina newMasina = new Masina("EI43", "Volkswagen", "GOLF 5", 2009, 45000,9000);
@@ -29,10 +29,10 @@ public class TestMasina {
 				System.out.println("Va rugam introduceti o optiune valida !");
 				optiuneMeniu = sc.nextInt();
 			}
-		}
-		
-		
-
+			
+			doOptiuneMeniu(optiuneMeniu, masini);
+			
+		}while(optiuneMeniu != 6);
 	}
 
 	public static void listaMeniu() {
@@ -69,30 +69,44 @@ public class TestMasina {
              break;
          case 1:
              System.out.println("Lista masini");
-             displayCars(cars);
-             break;
-         case 2:
-             System.out.println("Add new car to database.");
-             addNewCar(cars);
-             break;
-         case 3:
-             System.out.println("Delete a car from a database.");
-             deleteCar(cars);
-             break;
-         case 4:
-             System.out.println("Search for a Car.");
-             searchCar(cars);
-             break;
-         case 5:
-             System.out.println("List of cars by given price range.");
-             listCarByPriceRange(cars);
-             break;
-         case 6:
-             break;
+             afiseazaMasini(masini);
+//             break;
+//         case 2:
+//             System.out.println("Add new car to database.");
+//             adaugaMasinaNoua(masini);
+//             break;
+//         case 3:
+//             System.out.println("Delete a car from a database.");
+//             stergeMasina(masini);
+//             break;
+//         case 4:
+//             System.out.println("Search for a Car.");
+//             cautaMasina(masini);
+//             break;
+//         case 5:
+//             System.out.println("List of cars by given price range.");
+//             sorteazaMasina(masini);
+//             break;
+//         case 6:
+//             break;
          default:
              break;
 		}
 		
 		
 	}
+	
+	public static void afiseazaMasini(ArrayList<Masina> masini){
+		String formatter = "| %-2d | %-6s | %-15s | %-15s | %-5d | %-8d | $%.2f   |%n";
+        System.out.format("+----+--------+-----------------+-----------------+-------+----------+------------+%n");
+        System.out.printf("| #  | NI     | PRODUCATOR      | Model           |  AN   |     KM   | Pret      |%n");
+        System.out.format("+----+--------+-----------------+-----------------+-------+----------+------------+%n");
+        int i = 0;
+        //for - each loop https://www.w3schools.com/java/java_for_loop.asp (nu stiu exact cum functioneaza)
+        for (Masina masina:masini) {
+        	System.out.format(formatter,++i,masina.getNI(),masina.getFabricant(),masina.getModel(),masina.getAn(),masina.getKilometraj(),masina.getPret());
+        }
+	}
+	
+	
 }
