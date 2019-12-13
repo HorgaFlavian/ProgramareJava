@@ -1,3 +1,9 @@
+// http://www.java2s.com/Code/Java/Language-Basics/UseScannertoreadvarioustypesofdatafromafile.htm -- citire fisier
+// https://apidocs.marketcheck.com/?version=latest -- API MARKET CAR
+
+
+
+
 package proiect_facultate_masina;
 
 import java.io.*;
@@ -70,21 +76,21 @@ public class TestMasina {
          case 1:
              System.out.println("Lista masini");
              afiseazaMasini(masini);
-//             break;
+             break;
 //         case 2:
-//             System.out.println("Add new car to database.");
+//             System.out.println("Adaugati o masina noua dupa model.");
 //             adaugaMasinaNoua(masini);
 //             break;
 //         case 3:
-//             System.out.println("Delete a car from a database.");
+//             System.out.println("Adauga o masina noua dupa model.");
 //             stergeMasina(masini);
 //             break;
 //         case 4:
-//             System.out.println("Search for a Car.");
+//             System.out.println("Cauta o masina.");
 //             cautaMasina(masini);
 //             break;
 //         case 5:
-//             System.out.println("List of cars by given price range.");
+//             System.out.println("Listeaza masini dupa un pret minim si maxim.");
 //             sorteazaMasina(masini);
 //             break;
 //         case 6:
@@ -106,6 +112,18 @@ public class TestMasina {
         for (Masina masina:masini) {
         	System.out.format(formatter,++i,masina.getNI(),masina.getFabricant(),masina.getModel(),masina.getAn(),masina.getKilometraj(),masina.getPret());
         }
+	}
+	
+	public static void adaugaMasinaNoua(ArrayList<Masina> masini){
+		boolean optiuneValida;
+		String NI;
+		String producator;
+		String model;
+		int kilometraj = 0;
+		float pret = 0.00F;
+		int an = 0;
+		System.out.println("Introduceti o masina noua dupa model:");
+		System.out.println("NI PRODUCATOR MODEL AN KM PRET");
 	}
 	
 	
